@@ -9,38 +9,10 @@ export default function ListaTareas() {
     return (
         <>
             <View style={styles.container}>
-                <View style={styles.title}>
-                    <Text style={styles.header}>Lista de Tareas</Text>
-                </View>
-                <View style={styles.addTarea}>
-                    <Text style={styles.tarea}>Tarea</Text>
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Escribe la tarea"
-                        onChangeText={e => setTarea(e)}
-                        defaultValue={tarea}
-                    />
-                    <Button 
-                        style={styles.button}
-                        onPress={() => {
-                            setTarea('')
-                            setListaTareas([...listaTareas, { tarea: tarea }])
-
-                        }}
-                        title="+"
-                        color="#841584"
-                    />
-                </View>
+                
+                
             </View>
-            <View style={styles.checkboxContainer}>
-                {listaTareas.map((tarea) => {
-                    return (
-                        <>
-                            <Checkbox texto={tarea.tarea} />
-                        </>
-                    )
-                })}
-            </View>
+            
         </>
     )
 }

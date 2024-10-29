@@ -1,0 +1,37 @@
+import { View, StyleSheet } from "react-native"
+import Checkbox from './CheckBox'
+import React, { useState } from 'react'
+
+
+export default function CheckboxContainer(){
+    const [listaTareas, setListaTareas] = useState([])
+    return(
+        <>
+        <View style={styles.checkboxContainer}>
+            {listaTareas.map((tarea) => {
+                return (
+                    <>
+                        <View style={styles.tarea}>
+                            <Checkbox texto={tarea.tarea} />
+                        </View>
+                    </>
+                )
+            })}
+        </View>
+        </>
+    )
+}
+
+const styles = StyleSheet.create({
+
+    checkboxContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        marginLeft: 100,
+
+    },
+    tarea: {
+        
+    }
+});
