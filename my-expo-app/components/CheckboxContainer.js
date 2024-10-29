@@ -4,16 +4,17 @@ import React, { useState } from 'react'
 
 
 export default function CheckboxContainer(){
-    const [listaTareas, setListaTareas] = useState([])
+    const [listaTareas] = useState([])
     return(
         <>
         <View style={styles.checkboxContainer}>
             {listaTareas.map((tarea) => {
                 return (
                     <>
-                        <View style={styles.tarea}>
+                        {/* <View style={styles.tarea}>
                             <Checkbox texto={tarea.tarea} />
-                        </View>
+                        </View> */}
+                        <Checkbox texto={tarea.tarea} />
                     </>
                 )
             })}
@@ -30,8 +31,5 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         marginLeft: 100,
 
-    },
-    tarea: {
-        
     }
 });

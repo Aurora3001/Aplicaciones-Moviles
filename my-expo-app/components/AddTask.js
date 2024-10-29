@@ -16,21 +16,14 @@ export default function AddTask(){
                 />
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => {HTMLAllCollection
-                        setTarea('')
-                        setListaTareas([...listaTareas, { tarea: tarea }])
-
-                    }}/>
-                {/* <Button 
-                    style={styles.button}
                     onPress={() => {
                         setTarea('')
                         setListaTareas([...listaTareas, { tarea: tarea }])
 
                     }}
-                    title="+"
-                    color="#841584"
-                /> */}
+                >
+                    <Text style={styles.add}>Agregar</Text>
+                </TouchableOpacity>
             </View>
         </>
     )
@@ -59,4 +52,15 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10
     },
+    button: {
+        alignItems: 'center',
+        backgroundColor: '#049afc',
+        padding: 10,
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: '#252525'
+    },
+    add: {
+        color: '#ffffff'
+    }
 });
